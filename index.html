@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- Mirrors partials/head-meta.html for reuse. -->
+  <title>المرصد الاستيطاني | منصة متابعة الاستيطان</title>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="المرصد الاستيطاني يتتبع ويراقب تفاصيل الاستيطان في فلسطين عبر واجهة متقدمة مخصصة لدعم الباحثين والجهات المهتمة.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3c5252">
+  <meta property="og:title" content="المرصد الاستيطاني">
+  <meta property="og:description"
+    content="منصة عربية متخصصة في رصد الاستيطان وعرض البيانات الموثوقة للصحفيين والباحثين.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="المرصد الاستيطاني">
+  <meta name="twitter:description"
+    content="منصة عربية متخصصة في رصد الاستيطان وعرض البيانات الموثوقة للصحفيين والباحثين.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <!-- Placeholder asset: replace with finalized Apple touch icon when available. -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+  <!-- Bootstrap RTL CDN; copy to assets/css/bootstrap.rtl.min.css for local hosting. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-overrides.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://example.com/#organization",
+        "name": "المرصد الاستيطاني",
+        "url": "https://example.com/",
+        "logo": "https://example.com/assets/icons/favicon.svg",
+        "sameAs": [
+          "https://twitter.com/example",
+          "https://facebook.com/example"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "areaServed": "PS",
+            "availableLanguage": [
+              "Arabic",
+              "English"
+            ]
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://example.com/#website",
+        "url": "https://example.com/",
+        "name": "المرصد الاستيطاني",
+        "publisher": {
+          "@id": "https://example.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="u-skip-link" href="#main-content">تخطي إلى المحتوى</a>
+  <div class="l-shell">
+    <!-- =========================================
+        Header — Premium RTL + Offcanvas
+        Notes:
+        - Static anchors (backend will replace later)
+        - No HTML injection
+      ========================================== -->
+    <header class="c-header" role="banner">
+      <div class="c-header__inner">
+
+        <!-- Brand (Right in RTL naturally) -->
+        <a class="c-header__brand" href="#top" aria-label="المرصد الاستيطاني">
+          <img class="c-header__logo c-header__logo--light" src="assets/img/logo.png" alt="المرصد الاستيطاني"
+            width="220" height="56" loading="eager" decoding="async" />
+          <img class="c-header__logo c-header__logo--dark" src="assets/img/logo-white.png" alt="" width="220"
+            height="56" loading="eager" decoding="async" aria-hidden="true" />
+          <span class="u-hidden-visually">المرصد الاستيطاني</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="c-header__nav" aria-label="التنقل الرئيسي">
+          <ul class="c-nav" data-nav>
+            <li class="c-nav__item"><a class="c-nav__link is-active" href="#top">الرئيسية</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#about">عن المرصد</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#goals">أهدافنا</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#violations">الانتهاكات</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#documentation">كيفية التوثيق</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#participate">ساهم معنا</a></li>
+            <li class="c-nav__item"><a class="c-nav__link" href="#contact">تواصل</a></li>
+          </ul>
+        </nav>
+
+        <!-- Actions (Left) -->
+        <div class="c-header__actions">
+          <a class="c-button c-button--primary c-header__cta" href="#participate">
+            ساهم بتوثيق
+          </a>
+
+          <button class="c-header__toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav"
+            aria-controls="siteNav" aria-expanded="false" aria-label="فتح قائمة التنقل">
+            <span class="c-header__toggle-icon" aria-hidden="true">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+            <span class="c-header__toggle-label">القائمة</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Offcanvas (Mobile) -->
+    <div class="offcanvas offcanvas-end c-offcanvas" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel">
+      <div class="offcanvas-header c-offcanvas__header">
+        <div class="c-offcanvas__brand">
+          <img src="assets/img/logo-white.png" alt="المرصد الاستيطاني" width="160" height="40" loading="eager"
+            decoding="async" />
+          <h2 id="siteNavLabel" class="u-hidden-visually">قائمة التنقل</h2>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+      </div>
+
+      <div class="offcanvas-body c-offcanvas__body">
+        <nav aria-label="قائمة الهاتف">
+          <ul class="c-offcanvas__nav" data-nav>
+            <li><a class="c-offcanvas__link" href="#top"><i class="fa-solid fa-house"
+                  aria-hidden="true"></i><span>الرئيسية</span></a></li>
+            <li><a class="c-offcanvas__link" href="#about"><i class="fa-solid fa-circle-info"
+                  aria-hidden="true"></i><span>عن المرصد</span></a></li>
+            <li><a class="c-offcanvas__link" href="#goals"><i class="fa-solid fa-bullseye"
+                  aria-hidden="true"></i><span>أهدافنا</span></a></li>
+            <li><a class="c-offcanvas__link" href="#violations"><i class="fa-solid fa-triangle-exclamation"
+                  aria-hidden="true"></i><span>الانتهاكات</span></a></li>
+            <li><a class="c-offcanvas__link" href="#documentation"><i class="fa-solid fa-camera"
+                  aria-hidden="true"></i><span>كيفية التوثيق</span></a></li>
+            <li><a class="c-offcanvas__link" href="#participate"><i class="fa-solid fa-hand-holding-heart"
+                  aria-hidden="true"></i><span>ساهم معنا</span></a></li>
+            <li><a class="c-offcanvas__link" href="#contact"><i class="fa-solid fa-envelope"
+                  aria-hidden="true"></i><span>تواصل</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="c-offcanvas__actions">
+          <a class="c-button c-button--primary" href="#participate">شارك بتوثيق</a>
+          <a class="c-button c-button--ghost" href="#contact">تواصل معنا</a>
+        </div>
+      </div>
+    </div>
+
+
+    <main id="main-content" class="l-main" role="main">
+      <!-- =========================================
+        Hero — Documentary / Evidence-first
+      ========================================== -->
+      <section id="top" class="c-hero" aria-labelledby="hero-title">
+        <div class="c-hero__inner">
+
+          <!-- Left / Main Content -->
+          <div class="c-hero__content">
+
+            <div class="c-hero__kicker">
+              <span class="c-hero__tag">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                منصة رصد وتوثيق
+              </span>
+              <span class="c-hero__tag c-hero__tag--muted">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                معايير تحقق ودقة
+              </span>
+            </div>
+
+            <h1 id="hero-title" class="c-hero__title">
+              المرصد الاستيطاني
+              <span class="c-hero__title-sub">لرصد الاستيطان والانتهاكات</span>
+            </h1>
+
+            <p class="c-hero__lead">
+              المرصد الاستيطاني منصة تهدف إلى رصد وتوثيق الانتهاكات التي يرتكبها المستوطنون ضد الفلسطينيين
+              من خلال تقارير دورية مفصلة وصور وأدلة ميدانية بهدف زيادة الوعي حول ما يجري من انتهاكات متواصلة
+            </p>
+
+            <div class="c-hero__actions">
+              <a class="c-button c-button--primary" href="#violations">
+                <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+                استعرض الانتهاكات
+              </a>
+              <a class="c-button c-button--soft" href="#participate">
+                <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                ساهم بتوثيق
+              </a>
+            </div>
+
+            <!-- Quick credibility strip -->
+            <div class="c-hero__trust" role="list" aria-label="عناصر الثقة">
+              <div class="c-hero__trust-item" role="listitem">
+                <div class="c-hero__trust-icon" aria-hidden="true">
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <div class="c-hero__trust-text">
+                  <strong>تقارير دورية</strong>
+                  <span>توثيق منظم ومراجع</span>
+                </div>
+              </div>
+
+              <div class="c-hero__trust-item" role="listitem">
+                <div class="c-hero__trust-icon" aria-hidden="true">
+                  <i class="fa-solid fa-image"></i>
+                </div>
+                <div class="c-hero__trust-text">
+                  <strong>أدلة ميدانية</strong>
+                  <span>صور وفيديو وشهادات</span>
+                </div>
+              </div>
+
+              <div class="c-hero__trust-item" role="listitem">
+                <div class="c-hero__trust-icon" aria-hidden="true">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div class="c-hero__trust-text">
+                  <strong>متابعة مستمرة</strong>
+                  <span>تصنيف وتحليل للأنماط</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right / Evidence Panel -->
+          <div class="c-evidence" role="region" aria-labelledby="evidence-title">
+
+            <!-- Header -->
+            <header class="c-evidence__head">
+              <div class="c-evidence__title">
+                <span class="c-evidence__mark" aria-hidden="true">
+                  <i class="fa-solid fa-clipboard-check"></i>
+                </span>
+                <div>
+                  <h2 id="evidence-title" class="c-evidence__h">نظرة سريعة على ما نرصده</h2>
+                  <p class="c-evidence__sub">مؤشرات مختصرة لفهم نطاق الرصد</p>
+                </div>
+              </div>
+
+              <div class="c-evidence__meta">
+                <span class="c-evidence__pill">
+                  <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                  تحديثات مستمرة
+                </span>
+                <span class="c-evidence__pill c-evidence__pill--soft">
+                  آخر تحديث <strong>اليوم</strong>
+                </span>
+              </div>
+            </header>
+
+            <!-- Tabs (CSS only) -->
+            <div class="c-evidence__tabs">
+              <input type="radio" name="evidence-tabs" id="tab-types" checked>
+              <input type="radio" name="evidence-tabs" id="tab-method">
+
+              <div class="c-evidence__switch" role="tablist">
+                <label for="tab-types" class="c-evidence__tab" role="tab">الأنواع</label>
+                <label for="tab-method" class="c-evidence__tab" role="tab">منهجية التوثيق</label>
+              </div>
+
+              <!-- Tab Panels -->
+              <div class="c-evidence__panels">
+
+                <!-- Types -->
+                <div class="c-evidence__panel c-evidence__panel--types" role="tabpanel">
+                  <div class="c-evidence__types">
+                    <a class="c-evidence__chip" href="#violations">هدم المنازل</a>
+                    <a class="c-evidence__chip" href="#violations">مصادرة الأراضي</a>
+                    <a class="c-evidence__chip" href="#violations">حرق المنازل</a>
+                    <a class="c-evidence__chip" href="#violations">اعتداءات جسدية</a>
+                    <a class="c-evidence__chip" href="#violations">هجمات منظمة</a>
+                    <a class="c-evidence__chip" href="#violations">توسع استيطاني</a>
+                  </div>
+                </div>
+
+                <!-- Methodology -->
+                <div class="c-evidence__panel c-evidence__panel--method" role="tabpanel">
+                  <div class="c-evidence__timeline">
+                    <div class="c-evidence__step">
+                      <span class="c-evidence__dot"></span>
+                      <div class="c-evidence__body">
+                        <strong>جمع الأدلة</strong>
+                        <span>صور فيديو شهادات ميدانية</span>
+                      </div>
+                    </div>
+                    <div class="c-evidence__step">
+                      <span class="c-evidence__dot"></span>
+                      <div class="c-evidence__body">
+                        <strong>تحقق وتصنيف</strong>
+                        <span>تدقيق المصدر والمكان والزمان</span>
+                      </div>
+                    </div>
+                    <div class="c-evidence__step">
+                      <span class="c-evidence__dot"></span>
+                      <div class="c-evidence__body">
+                        <strong>نشر وتحديث</strong>
+                        <span>تقارير دورية ودعم الحملات</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="c-evidence__actions">
+              <a class="c-button c-button--primary" href="#documentation">
+                اقرأ كيفية التوثيق
+              </a>
+              <a class="c-button c-button--soft" href="#contact">
+                أرسل بلاغا
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================
+        About — Editorial, non-repetitive
+      ========================================== -->
+      <section id="about" class="c-about" aria-labelledby="about-title">
+        <div class="c-about__inner">
+
+          <div class="c-about__content">
+            <div class="c-about__kicker">
+              <span class="c-badge c-badge--soft">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                عن المرصد
+              </span>
+            </div>
+
+            <h2 id="about-title" class="c-about__title">عن المرصد الاستيطاني</h2>
+
+            <p class="c-about__lead">
+              المرصد الاستيطاني منصة تهدف إلى رصد وتوثيق الانتهاكات التي يرتكبها المستوطنون ضد الفلسطينيين
+              يعمل المرصد على توثيق هذه الانتهاكات بدقة عبر تقارير دورية مفصلة وصور وأدلة ميدانية
+              بهدف زيادة الوعي حول ما يجري من انتهاكات متواصلة
+            </p>
+
+            <ul class="c-about__bullets">
+              <li>
+                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+                صياغة محتوى قابل للنشر والتضمين ضمن مواد إعلامية وتقارير
+              </li>
+              <li>
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                تنظيم المعلومات ضمن تصنيفات تساعد على القراءة والفهم السريع
+              </li>
+            </ul>
+
+            <div class="c-about__action">
+              <a class="c-link" href="#documentation">
+                تعرّف على منهجية التوثيق
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <aside class="c-about__aside" aria-label="مبادئ العمل">
+            <div class="c-about__grid">
+
+              <!-- Primary card (leader) -->
+              <article class="c-mini c-mini--primary">
+                <div class="c-mini__icon" aria-hidden="true">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="c-mini__title">دقة وموثوقية</h3>
+                <p class="c-mini__text">
+                  نُعطي الأولوية لتوثيق واضح يمكن الرجوع إليه
+                </p>
+              </article>
+
+              <article class="c-mini">
+                <div class="c-mini__icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="c-mini__title">سياق مكاني وزماني</h3>
+                <p class="c-mini__text">
+                  ربط الشهادة بالمكان والوقت قدر الإمكان
+                </p>
+              </article>
+
+              <article class="c-mini">
+                <div class="c-mini__icon" aria-hidden="true">
+                  <i class="fa-solid fa-tags"></i>
+                </div>
+                <h3 class="c-mini__title">تصنيف قابل للتوسع</h3>
+                <p class="c-mini__text">
+                  هيكل يساعد فريق الباك اند على ربط البيانات لاحقًا
+                </p>
+              </article>
+
+              <article class="c-mini c-mini--accent">
+                <div class="c-mini__icon" aria-hidden="true">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="c-mini__title">هدف واضح</h3>
+                <p class="c-mini__text">
+                  زيادة الوعي وتقديم صورة دقيقة عما يجري على الأرض
+                </p>
+              </article>
+
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+
+
+      <!-- =========================================
+        Goals — Compact, clean, strong
+      ========================================== -->
+      <section id="goals" class="c-goals" aria-labelledby="goals-title">
+        <div class="c-goals__inner">
+
+          <header class="c-goals__head">
+            <span class="c-badge c-badge--soft">
+              <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              أهداف المرصد
+            </span>
+
+            <h2 id="goals-title" class="c-goals__title">أهداف المرصد</h2>
+
+            <p class="c-goals__lead">
+              يهدف المرصد الاستيطاني إلى تحقيق عدة أهداف رئيسية تدعم نقل الحقيقة ورفع الوعي وتعزيز الحملات الإعلامية
+            </p>
+            <div class="c-goals__outputs" aria-label="مخرجات المرصد">
+              <div class="c-output">
+                <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+                <span>تقارير قابلة للنشر</span>
+              </div>
+              <div class="c-output">
+                <i class="fa-solid fa-photo-film" aria-hidden="true"></i>
+                <span>أدلة ميدانية موثقة</span>
+              </div>
+              <div class="c-output">
+                <i class="fa-solid fa-folder-tree" aria-hidden="true"></i>
+                <span>تصنيفات قابلة للتوسع</span>
+              </div>
+            </div>
+
+
+            <a class="c-link" href="#violations">
+              اطلع على أنواع الانتهاكات
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </a>
+          </header>
+
+          <div class="c-goals__list" aria-label="الأهداف الرئيسية">
+
+            <article class="c-goal">
+              <div class="c-goal__icon" aria-hidden="true">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+              <div class="c-goal__body">
+                <h3 class="c-goal__title">نقل الحقيقة</h3>
+                <p class="c-goal__text">
+                  تقديم تقارير دورية حول الانتهاكات بصياغة واضحة قابلة للاستخدام الإعلامي
+                </p>
+              </div>
+            </article>
+
+            <article class="c-goal">
+              <div class="c-goal__icon" aria-hidden="true">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="c-goal__body">
+                <h3 class="c-goal__title">رفع الوعي</h3>
+                <p class="c-goal__text">
+                  تسليط الضوء على ممارسات الاستيطان بشكل مستمر لتوعية الجمهور محليًا ودوليًا
+                </p>
+              </div>
+            </article>
+
+            <article class="c-goal">
+              <div class="c-goal__icon" aria-hidden="true">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div class="c-goal__body">
+                <h3 class="c-goal__title">دعم الحملات الإعلامية</h3>
+                <p class="c-goal__text">
+                  تعزيز الحملات الإعلامية بمحتوى موثق ومؤسس على أدلة
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================
+  Violations — Grouped grid (no long lists)
+========================================== -->
+      <section id="violations" class="c-violations" aria-labelledby="violations-title">
+        <div class="c-violations__inner">
+
+          <header class="c-violations__head">
+            <span class="c-badge c-badge--soft">
+              <i class="fa-solid fa-gavel" aria-hidden="true"></i>
+              أنواع الانتهاكات
+            </span>
+
+            <h2 id="violations-title" class="c-violations__title">أنواع الانتهاكات التي يرصدها المرصد</h2>
+
+            <p class="c-violations__lead">
+              يرصد المرصد الاستيطاني أنماطًا متعددة من الانتهاكات على الأرض ويعرضها ضمن تصنيفات واضحة تساعد على الفهم
+              والمتابعة
+            </p>
+
+            <a class="c-link" href="#documentation">
+              تعرّف على كيفية التوثيق
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </a>
+          </header>
+
+          <div class="c-violations__grid" role="list" aria-label="قائمة أنواع الانتهاكات">
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-house-chimney-crack"></i></div>
+              <h3 class="c-violation__title">هدم المنازل والممتلكات</h3>
+              <p class="c-violation__text">توثيق عمليات الهدم وآثارها على العائلات والبنية المحلية</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
+              <h3 class="c-violation__title">الهجمات على الأراضي الزراعية</h3>
+              <p class="c-violation__text">اعتداءات على المزروعات والحقول ومصادر الرزق</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-hand-fist"></i></div>
+              <h3 class="c-violation__title">اعتداءات جسدية</h3>
+              <p class="c-violation__text">رصد الاعتداءات على المواطنين وملابساتها الميدانية</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-place-of-worship"></i></div>
+              <h3 class="c-violation__title">الاعتداء على الأماكن المقدسة</h3>
+              <p class="c-violation__text">توثيق الاعتداءات والإغلاقات والتدنيس والإجراءات المصاحبة</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-mountain-sun"></i></div>
+              <h3 class="c-violation__title">مصادرة الأراضي</h3>
+              <p class="c-violation__text">رصد المصادرات والإخطارات وما يرتبط بها من توسع</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-city"></i></div>
+              <h3 class="c-violation__title">بؤر استيطانية جديدة</h3>
+              <p class="c-violation__text">متابعة إنشاء البؤر وتحولها إلى واقع ميداني</p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <h3 class="c-violation__title">حرق المنازل</h3>
+              <p class="c-violation__text">توثيق الحرائق المتعمدة والنتائج الإنسانية والمادية</p>
+            </article>
+
+            <!-- Wide card -->
+            <article class="c-violation c-violation--wide" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
+              <h3 class="c-violation__title">هجمات المستوطنين المنظمة</h3>
+              <p class="c-violation__text">
+                رصد الهجمات الجماعية على القرى والبلدات وتوثيق نمطها وتكرارها
+              </p>
+            </article>
+
+            <!-- Wide card -->
+            <article class="c-violation c-violation--wide" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-road"></i></div>
+              <h3 class="c-violation__title">مشاريع التوسعة الاستيطانية</h3>
+              <p class="c-violation__text">
+                متابعة مشاريع التوسع والبنية المرتبطة بها وتأثيرها على الجغرافيا والسكان
+              </p>
+            </article>
+
+            <article class="c-violation" role="listitem">
+              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></div>
+              <h3 class="c-violation__title">الاعتداء على الممتلكات العامة</h3>
+              <p class="c-violation__text">استهداف مرافق عامة وبنية خدمية وتأثير ذلك على الحياة اليومية</p>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="documentation" class="c-section" aria-labelledby="documentation-title">
+        <div class="c-section__inner">
+          <header>
+            <h2 id="documentation-title" class="c-section-title">مكتبة التوثيق</h2>
+            <p class="c-section-subtitle">مواد داعمة للبحث والتحقق من صحة البيانات.</p>
+          </header>
+          <div class="c-card">
+            <h3>تقارير شهرية وجداول بيانات</h3>
+            <p>مجموعة من التقارير الأولية والجداول التي يمكن تحميلها ومقارنتها مع البيانات الحقلية.</p>
+            <a class="c-button c-button--ghost" href="#">تحميل آخر الملفات</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="participate" class="c-section" aria-labelledby="participate-title">
+        <div class="c-section__inner">
+          <header>
+            <h2 id="participate-title" class="c-section-title">شارك في عمل المرصد</h2>
+            <p class="c-section-subtitle">نرحب بالباحثين والشهود الميدانيين لتوصيل معلومات جديدة بأمان.</p>
+          </header>
+          <p>أرسل ملاحظاتك أو ملفاتك الأولية إلى فريقنا حتى نتمكن من التحقق منها وعرضها ضمن التقارير الموثقة.</p>
+          <div class="u-stack u-stack--row">
+            <a class="c-button" href="#contact">شارك بالتوثيق</a>
+            <a class="c-button c-button--ghost" href="#documentation">اطلع على أدواتنا</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="c-section" aria-labelledby="contact-title">
+        <div class="c-section__inner">
+          <header>
+            <h2 id="contact-title" class="c-section-title">اتصل بالمرصد</h2>
+            <p class="c-section-subtitle">نرحب بالأسئلة والشراكات المدعومة بالبيانات.</p>
+          </header>
+          <div class="c-card">
+            <form action="#" method="post" novalidate>
+              <label>
+                <span>الاسم الكامل</span>
+                <input type="text" name="full-name" placeholder="الاسم الكامل" required>
+              </label>
+              <label>
+                <span>البريد الإلكتروني</span>
+                <input type="email" name="email" placeholder="name@example.com" required>
+              </label>
+              <label>
+                <span>الرسالة</span>
+                <textarea name="message" rows="4" placeholder="أخبرنا بما تحتاجه"></textarea>
+              </label>
+              <button class="c-button" type="submit">إرسال الطلب</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Partial: partials/footer.html mirrored here to keep the scaffold coherent. -->
+    <footer class="l-footer c-footer" role="contentinfo">
+      <div class="l-footer__inner">
+        <p class="u-text-muted">© 2026 المرصد الاستيطاني. جميع الحقوق محفوظة.</p>
+        <ul class="c-nav-list" aria-label="Footer navigation">
+          <li><a href="#documentation">توثيق</a></li>
+          <li><a href="#participate">مساعدة</a></li>
+          <li><a href="#contact">سياسة الخصوصية</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/vendors.js" defer></script>
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>

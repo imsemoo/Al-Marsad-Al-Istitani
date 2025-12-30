@@ -1,0 +1,159 @@
+﻿@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alexandria-Light";
+  src: url("../fonts/Alexandria-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alexandria-SemiBold";
+  src: url("../fonts/Alexandria-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alexandria-Bold";
+  src: url("../fonts/Alexandria-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alexandria-ExtraBold";
+  src: url("../fonts/Alexandria-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Barada";
+  src: url("../fonts/barada-reqa.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Core design tokens for Arabic RTL editorial experience. */
+:root {
+  /* Core palette */
+  --c-text: #4e4e4e;
+  --c-surface: #e4e4e4;
+  --c-brand: #3c5252;
+  --c-accent: #868249;
+
+  /* Light theme surfaces */
+  --color-bg-page: #f7f7f5;
+  /* page background */
+  --color-bg-section: #ffffff;
+  /* main sections */
+  --color-bg-card: #ffffff;
+  /* cards */
+  --color-bg-soft: #f1f1ee;
+  /* soft blocks / chips background */
+
+  /* Text */
+  --color-heading: #2b2b2b;
+  --color-text-primary: var(--c-text);
+  --color-text-muted: #6a6a6a;
+  --color-text-inverse: #ffffff;
+
+  /* Borders */
+  --color-border-soft: #e3e3de;
+  --color-border-strong: #d2d2cb;
+
+  /* Brand roles */
+  --color-brand: var(--c-brand);
+  --color-accent: var(--c-accent);
+
+  /* Links */
+  --color-link: var(--c-brand);
+  --color-link-hover: color-mix(in srgb, var(--c-brand) 85%, #000);
+
+  /* Buttons */
+  --color-button-primary: var(--c-brand);
+  --color-button-primary-hover: color-mix(in srgb, var(--c-brand) 85%, #000);
+
+  /* Focus */
+  --color-focus-ring: color-mix(in srgb, var(--c-brand) 35%, transparent);
+
+  /* Typography foundation */
+  --ff-body: "Alexandria", "Cairo", "Segoe UI", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+  --ff-heading: "Alexandria-Bold", "GE SS Unique", "Segoe UI", sans-serif;
+
+  --fs-xs: clamp(0.8rem, 0.9vw, 0.9rem);
+  --fs-sm: clamp(0.95rem, 1vw, 1rem);
+  --fs-md: clamp(1rem, 1.2vw, 1.1rem);
+  --fs-lg: clamp(1.2rem, 1.5vw, 1.4rem);
+  --fs-xl: clamp(1.45rem, 2vw, 1.75rem);
+  --fs-xxl: clamp(1.85rem, 2.6vw, 2.25rem);
+  --fs-display: clamp(2.5rem, 4vw, 3.6rem);
+
+  --lh-tight: 1.25;
+  --lh-normal: 1.6;
+  --lh-loose: 1.9;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Spacing system */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-section: 4rem;
+
+  /* Layout boundaries for responsive containers. */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-xxl: 1320px;
+
+  /* Responsive breakpoints. */
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+  --bp-xxl: 1400px;
+
+  /* Radius scale */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Shadow system */
+  --shadow-sm: 0 6px 14px rgba(60, 82, 82, 0.08);
+  --shadow-md: 0 15px 35px rgba(60, 82, 82, 0.12);
+  --shadow-lg: 0 30px 60px rgba(60, 82, 82, 0.16);
+
+  /* Depth / layering */
+  --z-header: 60;
+  --z-overlay: 90;
+  --z-dropdown: 80;
+  --z-modal: 110;
+
+  /* Motion helpers */
+  --transition-base: 220ms ease-out;
+  --transition-strong: 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}

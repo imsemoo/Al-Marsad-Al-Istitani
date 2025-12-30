@@ -1,0 +1,117 @@
+﻿/* Global base styles establish typography, color, and accessibility foundations. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-page);
+  line-height: var(--lh-normal);
+  direction: rtl;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-size: var(--fs-md);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+  color: var(--color-heading);
+  margin: 0 0 var(--space-md);
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--fs-display);
+}
+
+h2 {
+  font-size: var(--fs-xxl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+h5 {
+  font-size: var(--fs-md);
+}
+
+h6 {
+  font-size: var(--fs-sm);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-primary);
+  line-height: var(--lh-loose);
+}
+
+ul,
+ol {
+  margin: 0 0 var(--space-md);
+  padding-inline-start: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-link-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--color-focus-ring);
+  color: var(--color-text-inverse);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
