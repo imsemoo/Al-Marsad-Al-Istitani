@@ -1568,6 +1568,10 @@ body.is-scrolled .c-header__inner {
   margin: var(--space-lg) 0;
 }
 
+.c-docs__evidence .c-evidence {
+  padding: var(--space-md);
+}
+
 .c-docs__inner {
   max-width: var(--container-xxl);
   margin-inline: auto;

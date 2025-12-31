@@ -76,5 +76,12 @@ document.addEventListener('click', (e) => {
   if (!el) return;
 
   e.preventDefault();
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  const rect = el.getBoundingClientRect();
+  const halfViewport = window.innerHeight / 2;
+  const targetTop = window.scrollY + rect.top - halfViewport + rect.height / 2;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const finalScroll = Math.min(Math.max(targetTop, 0), maxScroll);
+
+  window.scrollTo({ top: finalScroll, behavior: 'smooth' });
 });
