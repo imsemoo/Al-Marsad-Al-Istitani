@@ -518,7 +518,10 @@
 
 
       <!-- =========================================
-  Violations — Grouped grid (no long lists)
+          Violations — Uniform 3-col grid (no weird gaps)
+        ========================================== -->
+      <!-- =========================================
+  Violations — Smart chips + detail panel (Bootstrap tabs, no custom JS)
 ========================================== -->
       <section id="violations" class="c-violations" aria-labelledby="violations-title">
         <div class="c-violations__inner">
@@ -532,83 +535,297 @@
             <h2 id="violations-title" class="c-violations__title">أنواع الانتهاكات التي يرصدها المرصد</h2>
 
             <p class="c-violations__lead">
-              يرصد المرصد الاستيطاني أنماطًا متعددة من الانتهاكات على الأرض ويعرضها ضمن تصنيفات واضحة تساعد على الفهم
-              والمتابعة
+              اختر نوع الانتهاك لعرض وصف مختصر ومنهجية الرصد المتعلقة به ضمن واجهة متناسقة وسريعة الفهم
             </p>
-
-            <a class="c-link" href="#documentation">
-              تعرّف على كيفية التوثيق
-              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-            </a>
           </header>
 
-          <div class="c-violations__grid" role="list" aria-label="قائمة أنواع الانتهاكات">
+          <div class="c-violations__card">
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-house-chimney-crack"></i></div>
-              <h3 class="c-violation__title">هدم المنازل والممتلكات</h3>
-              <p class="c-violation__text">توثيق عمليات الهدم وآثارها على العائلات والبنية المحلية</p>
-            </article>
+            <div class="c-violations__layout">
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
-              <h3 class="c-violation__title">الهجمات على الأراضي الزراعية</h3>
-              <p class="c-violation__text">اعتداءات على المزروعات والحقول ومصادر الرزق</p>
-            </article>
+              <!-- Right: Detail panel -->
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-hand-fist"></i></div>
-              <h3 class="c-violation__title">اعتداءات جسدية</h3>
-              <p class="c-violation__text">رصد الاعتداءات على المواطنين وملابساتها الميدانية</p>
-            </article>
+              <div class="c-violations__chips" role="tablist" aria-label="اختر نوع الانتهاك">
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-place-of-worship"></i></div>
-              <h3 class="c-violation__title">الاعتداء على الأماكن المقدسة</h3>
-              <p class="c-violation__text">توثيق الاعتداءات والإغلاقات والتدنيس والإجراءات المصاحبة</p>
-            </article>
+                <button id="t1" class="c-vchip active" type="button" role="tab" aria-controls="v1" aria-selected="true"
+                  data-bs-toggle="tab" data-bs-target="#v1">
+                  <i class="fa-solid fa-house-chimney-crack" aria-hidden="true"></i>
+                  <span>هدم المنازل</span>
+                </button>
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-mountain-sun"></i></div>
-              <h3 class="c-violation__title">مصادرة الأراضي</h3>
-              <p class="c-violation__text">رصد المصادرات والإخطارات وما يرتبط بها من توسع</p>
-            </article>
+                <button id="t2" class="c-vchip" type="button" role="tab" aria-controls="v2" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v2">
+                  <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                  <span>الأراضي الزراعية</span>
+                </button>
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-city"></i></div>
-              <h3 class="c-violation__title">بؤر استيطانية جديدة</h3>
-              <p class="c-violation__text">متابعة إنشاء البؤر وتحولها إلى واقع ميداني</p>
-            </article>
+                <button id="t3" class="c-vchip" type="button" role="tab" aria-controls="v3" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v3">
+                  <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
+                  <span>اعتداءات جسدية</span>
+                </button>
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-fire-flame-curved"></i></div>
-              <h3 class="c-violation__title">حرق المنازل</h3>
-              <p class="c-violation__text">توثيق الحرائق المتعمدة والنتائج الإنسانية والمادية</p>
-            </article>
+                <button id="t4" class="c-vchip" type="button" role="tab" aria-controls="v4" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v4">
+                  <i class="fa-solid fa-place-of-worship" aria-hidden="true"></i>
+                  <span>أماكن مقدسة</span>
+                </button>
 
-            <!-- Wide card -->
-            <article class="c-violation c-violation--wide" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></div>
-              <h3 class="c-violation__title">هجمات المستوطنين المنظمة</h3>
-              <p class="c-violation__text">
-                رصد الهجمات الجماعية على القرى والبلدات وتوثيق نمطها وتكرارها
-              </p>
-            </article>
+                <button id="t5" class="c-vchip" type="button" role="tab" aria-controls="v5" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v5">
+                  <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
+                  <span>مصادرة أراضٍ</span>
+                </button>
 
-            <!-- Wide card -->
-            <article class="c-violation c-violation--wide" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-road"></i></div>
-              <h3 class="c-violation__title">مشاريع التوسعة الاستيطانية</h3>
-              <p class="c-violation__text">
-                متابعة مشاريع التوسع والبنية المرتبطة بها وتأثيرها على الجغرافيا والسكان
-              </p>
-            </article>
+                <button id="t6" class="c-vchip" type="button" role="tab" aria-controls="v6" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v6">
+                  <i class="fa-solid fa-city" aria-hidden="true"></i>
+                  <span>بؤر جديدة</span>
+                </button>
 
-            <article class="c-violation" role="listitem">
-              <div class="c-violation__icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></div>
-              <h3 class="c-violation__title">الاعتداء على الممتلكات العامة</h3>
-              <p class="c-violation__text">استهداف مرافق عامة وبنية خدمية وتأثير ذلك على الحياة اليومية</p>
-            </article>
+                <button id="t7" class="c-vchip" type="button" role="tab" aria-controls="v7" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v7">
+                  <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                  <span>ممتلكات عامة</span>
+                </button>
+
+                <button id="t8" class="c-vchip" type="button" role="tab" aria-controls="v8" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v8">
+                  <i class="fa-solid fa-road" aria-hidden="true"></i>
+                  <span>توسعة استيطانية</span>
+                </button>
+
+                <button id="t9" class="c-vchip" type="button" role="tab" aria-controls="v9" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v9">
+                  <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                  <span>هجمات منظمة</span>
+                </button>
+
+                <button id="t10" class="c-vchip" type="button" role="tab" aria-controls="v10" aria-selected="false"
+                  data-bs-toggle="tab" data-bs-target="#v10">
+                  <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+                  <span>حرق المنازل</span>
+                </button>
+
+              </div>
+              <!-- Left: chips -->
+              <div class="c-violations__panel">
+                <div class="tab-content" id="violationsTabContent">
+
+                  <div class="tab-pane fade show active" id="v1" role="tabpanel" aria-labelledby="t1" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-house-chimney-crack" aria-hidden="true"></i>
+                          هدم المنازل
+                        </span>
+                        <a class="c-link" href="#documentation">
+                          تعرّف على كيفية التوثيق
+                          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                        </a>
+                      </div>
+
+                      <h3 class="c-vpanel__title">هدم المنازل والممتلكات</h3>
+                      <p class="c-vpanel__text">
+                        توثيق عمليات الهدم وآثارها المباشرة على العائلات والبنية المحلية مع ربط الدليل بالسياق المكاني
+                        والزماني
+                      </p>
+
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور وفيديو قبل وبعد</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر أو شاهد</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع والتاريخ</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v2" role="tabpanel" aria-labelledby="t2" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                          الأراضي الزراعية
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">الهجمات على الأراضي الزراعية والمزروعات</h3>
+                      <p class="c-vpanel__text">
+                        رصد الاعتداءات التي تستهدف الحقول والمزروعات ومصادر الرزق بما يشمل التخريب والقطع والحرق
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> أثر مادي واضح</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> إفادة مالك الأرض</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق نوع الضرر</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v3" role="tabpanel" aria-labelledby="t3" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
+                          اعتداءات جسدية
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">الاعتداءات الجسدية على المواطنين</h3>
+                      <p class="c-vpanel__text">
+                        توثيق الاعتداءات ومجرياتها وتبعاتها بما يساعد على فهم النمط وتكرار الحوادث
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة + ملابسات</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> أدلة مرئية إن وجدت</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> ربط الحدث بالمكان</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v4" role="tabpanel" aria-labelledby="t4" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-place-of-worship" aria-hidden="true"></i>
+                          أماكن مقدسة
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">الاعتداء على الأماكن المقدسة</h3>
+                      <p class="c-vpanel__text">
+                        رصد الاعتداءات والإغلاقات والإجراءات المصاحبة التي تمس حرية العبادة والقدسية
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تفاصيل الإغلاق/المنع</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور من المكان</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تاريخ وسياق الحدث</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v5" role="tabpanel" aria-labelledby="t5" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
+                          مصادرة أراضٍ
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">مصادرة الأراضي</h3>
+                      <p class="c-vpanel__text">
+                        متابعة المصادرات والإخطارات وما يرتبط بها من تغييرات على الأرض ضمن مسار توسعي
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> مستند/إخطار إن وجد</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> إحداثيات/موقع</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف التغيير</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v6" role="tabpanel" aria-labelledby="t6" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-city" aria-hidden="true"></i>
+                          بؤر جديدة
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">إنشاء البؤر الاستيطانية الجديدة</h3>
+                      <p class="c-vpanel__text">
+                        رصد ظهور البؤر وكيف تتطور ميدانيًا وما يرتبط بها من تعديات على الأرض والمحيط
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> مؤشرات إنشاء</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور دورية</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> سياق المنطقة</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v7" role="tabpanel" aria-labelledby="t7" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                          ممتلكات عامة
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">الاعتداء على الممتلكات العامة</h3>
+                      <p class="c-vpanel__text">
+                        توثيق استهداف المرافق العامة والبنية الخدمية وتأثير ذلك على الحياة اليومية
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد المرفق</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> نوع الضرر</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شاهد/معلومة ميدانية</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v8" role="tabpanel" aria-labelledby="t8" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-road" aria-hidden="true"></i>
+                          توسعة استيطانية
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">مشاريع التوسعة الاستيطانية الجديدة</h3>
+                      <p class="c-vpanel__text">
+                        متابعة المشاريع والتغييرات البنيوية المرتبطة بها وتأثيرها على الجغرافيا والسكان
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تتبع مرحلي</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور تقدم المشروع</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف الأثر</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v9" role="tabpanel" aria-labelledby="t9" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                          هجمات منظمة
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">هجمات المستوطنين المنظمة على القرى والبلدات</h3>
+                      <p class="c-vpanel__text">
+                        رصد الهجمات الجماعية وتوثيق نمطها وتكرارها وما يرافقها من أضرار مادية وبشرية
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تسلسل زمني</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تعدد مصادر</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق أثر</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="v10" role="tabpanel" aria-labelledby="t10" tabindex="0">
+                    <div class="c-vpanel">
+                      <div class="c-vpanel__meta">
+                        <span class="c-vpanel__badge">
+                          <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+                          حرق المنازل
+                        </span>
+                      </div>
+                      <h3 class="c-vpanel__title">حرق المنازل في البلدات الفلسطينية</h3>
+                      <p class="c-vpanel__text">
+                        توثيق الحرائق المتعمدة والنتائج الإنسانية والمادية وربط الدليل بالمكان والزمان
+                      </p>
+                      <ul class="c-vpanel__points">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور الضرر</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+            </div>
 
           </div>
 
@@ -616,72 +833,595 @@
       </section>
 
 
-      <section id="documentation" class="c-section" aria-labelledby="documentation-title">
-        <div class="c-section__inner">
-          <header>
-            <h2 id="documentation-title" class="c-section-title">مكتبة التوثيق</h2>
-            <p class="c-section-subtitle">مواد داعمة للبحث والتحقق من صحة البيانات.</p>
+
+      <!-- =========================================
+  Documentation — Timeline + Evidence checklist (no custom JS)
+========================================== -->
+      <section id="documentation" class="c-docs" aria-labelledby="docs-title">
+        <div class="c-docs__inner">
+
+          <header class="c-docs__head">
+            <span class="c-badge c-badge--soft">
+              <i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
+              كيفية التوثيق
+            </span>
+
+            <h2 id="docs-title" class="c-docs__title">كيف نوثق الانتهاكات بدقة</h2>
+
+            <p class="c-docs__lead">
+              نعتمد منهجية واضحة تساعد على جمع الأدلة والتحقق منها ثم نشرها ضمن تقارير دورية قابلة للاستخدام الإعلامي
+            </p>
           </header>
-          <div class="c-card">
-            <h3>تقارير شهرية وجداول بيانات</h3>
-            <p>مجموعة من التقارير الأولية والجداول التي يمكن تحميلها ومقارنتها مع البيانات الحقلية.</p>
-            <a class="c-button c-button--ghost" href="#">تحميل آخر الملفات</a>
+
+          <div class="c-docs__card">
+            <div class="c-docs__layout">
+
+              <!-- Timeline -->
+              <div class="c-docs__timeline" aria-label="مراحل التوثيق">
+                <ol class="c-timeline">
+                  <li class="c-timeline__item">
+                    <div class="c-timeline__marker" aria-hidden="true">
+                      <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <div class="c-timeline__content">
+                      <h3 class="c-timeline__title">جمع الأدلة</h3>
+                      <p class="c-timeline__text">
+                        صور فيديو شهادات وملاحظات ميدانية مع كتابة ملخص سريع للواقعة
+                      </p>
+                      <div class="c-timeline__chips" aria-label="أمثلة على الأدلة">
+                        <span class="c-chip">صور ميدانية</span>
+                        <span class="c-chip">فيديو</span>
+                        <span class="c-chip">شهادة</span>
+                        <span class="c-chip">رابط خبر</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="c-timeline__item">
+                    <div class="c-timeline__marker" aria-hidden="true">
+                      <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="c-timeline__content">
+                      <h3 class="c-timeline__title">تحقق وتصنيف</h3>
+                      <p class="c-timeline__text">
+                        تدقيق المصدر المكان والزمان ثم تصنيف الانتهاك ضمن نوع واضح لتسهيل المتابعة
+                      </p>
+                      <ul class="c-mini-list">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> مطابقة التاريخ والموقع</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تقييم موثوقية المصدر</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توحيد وصف الحدث</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="c-timeline__item">
+                    <div class="c-timeline__marker" aria-hidden="true">
+                      <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="c-timeline__content">
+                      <h3 class="c-timeline__title">نشر وتحديث</h3>
+                      <p class="c-timeline__text">
+                        إدراج الواقعة ضمن التقارير الدورية وتحديثها عند ورود أدلة جديدة لدعم الحملات الإعلامية
+                      </p>
+                      <div class="c-callout">
+                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                        <span>كل تحديث يوثق كسجل مستقل لتجنب ضياع المعلومات</span>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Evidence checklist -->
+              <aside class="c-docs__evidence" aria-label="متطلبات الدليل">
+                <div class="c-evidence">
+                  <div class="c-evidence__top">
+                    <div>
+                      <h3 class="c-evidence__title">ما الذي يجعل الدليل قوي</h3>
+                      <p class="c-evidence__sub">قائمة مختصرة تساعدك تقدم توثيق قابل للاستخدام</p>
+                    </div>
+                    <div class="c-evidence__icon" aria-hidden="true">
+                      <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                  </div>
+
+                  <ul class="c-evidence__list">
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد المكان بدقة اسم القرية أو الحي</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الوقت تاريخ وساعة تقريبية</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> نوع الانتهاك تصنيف واضح</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> وصف مختصر ماذا حدث ومن تضرر</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> دليل مرئي صورة أو فيديو إن توفر</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة مختصرة اسم اختياري</li>
+                  </ul>
+
+                  <div class="c-evidence__note">
+                    <i class="fa-solid fa-shield" aria-hidden="true"></i>
+                    <div>
+                      <strong class="c-evidence__note-title">خصوصية وأمان</strong>
+                      <p class="c-evidence__note-text">
+                        لا تشارك بيانات حساسة إن كان ذلك يعرضك للخطر يكفي وصف الحدث والمكان العام
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="c-evidence__actions">
+                    <a class="c-button" href="#participate">
+                      ساهم بتوثيق
+                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="c-button c-button--ghost" href="#contact">
+                      تواصل معنا
+                    </a>
+                  </div>
+                </div>
+              </aside>
+
+            </div>
           </div>
+
         </div>
       </section>
 
-      <section id="participate" class="c-section" aria-labelledby="participate-title">
-        <div class="c-section__inner">
-          <header>
-            <h2 id="participate-title" class="c-section-title">شارك في عمل المرصد</h2>
-            <p class="c-section-subtitle">نرحب بالباحثين والشهود الميدانيين لتوصيل معلومات جديدة بأمان.</p>
+
+      <!-- =========================================
+  Participate — Contribute form + Ways to help (static)
+========================================== -->
+      <section id="participate" class="c-participate" aria-labelledby="participate-title">
+        <div class="c-participate__inner">
+
+          <header class="c-participate__head">
+            <span class="c-badge c-badge--soft">
+              <i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i>
+              ساهم معنا
+            </span>
+
+            <h2 id="participate-title" class="c-participate__title">كيف يمكنك المساعدة</h2>
+
+            <p class="c-participate__lead">
+              يمكنك المساهمة في رصد الانتهاكات عبر إرسال توثيق مختصر أو دعم حملات المرصد أو نشر الوعي عبر قنواتك
+            </p>
           </header>
-          <p>أرسل ملاحظاتك أو ملفاتك الأولية إلى فريقنا حتى نتمكن من التحقق منها وعرضها ضمن التقارير الموثقة.</p>
-          <div class="u-stack u-stack--row">
-            <a class="c-button" href="#contact">شارك بالتوثيق</a>
-            <a class="c-button c-button--ghost" href="#documentation">اطلع على أدواتنا</a>
+
+          <div class="c-participate__card">
+            <div class="c-participate__layout">
+
+              <!-- Right: Content / ways -->
+              <div class="c-participate__content">
+                <div class="c-participate__intro">
+                  <h3 class="c-participate__subtitle">مساهمتك تصنع فرقًا</h3>
+                  <p class="c-participate__text">
+                    كل توثيق حتى لو كان بسيطًا يساعد على بناء صورة أوضح لما يحدث
+                    الأهم هو وضوح المكان والوقت ونوع الانتهاك مع أي دليل متوفر
+                  </p>
+
+                  <div class="c-trust">
+                    <i class="fa-solid fa-shield" aria-hidden="true"></i>
+                    <div>
+                      <strong class="c-trust__title">خصوصية وأمان</strong>
+                      <p class="c-trust__text">
+                        لا نطلب بيانات حساسة يمكنك ترك الاسم فارغًا والاكتفاء بوصف الواقعة
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="c-help-cards" aria-label="طرق المساعدة">
+                  <article class="c-hcard">
+                    <div class="c-hcard__icon" aria-hidden="true">
+                      <i class="fa-solid fa-file-arrow-up"></i>
+                    </div>
+                    <div class="c-hcard__body">
+                      <h4 class="c-hcard__title">إرسال توثيق مباشر</h4>
+                      <p class="c-hcard__text">
+                        قدم ملخص الواقعة وحدد المكان والوقت وارفق رابط أو دليل إن توفر
+                      </p>
+                    </div>
+                  </article>
+
+                  <article class="c-hcard">
+                    <div class="c-hcard__icon" aria-hidden="true">
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="c-hcard__body">
+                      <h4 class="c-hcard__title">نشر الوعي</h4>
+                      <p class="c-hcard__text">
+                        شارك التقارير والمواد التوعوية لتوسيع وصول الحقيقة للجمهور
+                      </p>
+                    </div>
+                  </article>
+
+                  <article class="c-hcard">
+                    <div class="c-hcard__icon" aria-hidden="true">
+                      <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="c-hcard__body">
+                      <h4 class="c-hcard__title">دعم الحملات</h4>
+                      <p class="c-hcard__text">
+                        ساعد في تعزيز الحملات الإعلامية عبر مواد موثقة ومركزة
+                      </p>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="c-participate__cta-row">
+                  <a class="c-button" href="#violations">
+                    استعرض أنواع الانتهاكات
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                  </a>
+                  <a class="c-button c-button--ghost" href="#contact">
+                    تواصل معنا
+                  </a>
+                </div>
+              </div>
+
+              <!-- Left: Form -->
+              <aside class="c-participate__form" aria-label="نموذج إرسال توثيق">
+                <form class="c-pform" action="#" method="post" novalidate>
+                  <div class="c-pform__head">
+                    <div>
+                      <h3 class="c-pform__title">أرسل توثيقًا مختصرًا</h3>
+                      <p class="c-pform__sub">املأ ما تستطيع والباقي اختياري</p>
+                    </div>
+                    <div class="c-pform__badge" aria-hidden="true">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                  </div>
+
+                  <div class="c-pform__grid">
+                    <div class="c-field">
+                      <label class="c-field__label" for="p_fullname">الاسم اختياري</label>
+                      <input class="c-field__control" id="p_fullname" name="fullname" type="text"
+                        placeholder="يمكن تركه فارغًا" autocomplete="name">
+                    </div>
+
+                    <div class="c-field">
+                      <label class="c-field__label" for="p_email">البريد الإلكتروني اختياري</label>
+                      <input class="c-field__control" id="p_email" name="email" type="email"
+                        placeholder="name@example.com" autocomplete="email" inputmode="email">
+                    </div>
+
+                    <div class="c-field">
+                      <label class="c-field__label" for="p_location">المكان</label>
+                      <input class="c-field__control" id="p_location" name="location" type="text"
+                        placeholder="القرية أو المدينة أو الحي" autocomplete="off">
+                    </div>
+
+                    <div class="c-field">
+                      <label class="c-field__label" for="p_date">التاريخ</label>
+                      <input class="c-field__control" id="p_date" name="date" type="date">
+                    </div>
+
+                    <div class="c-field c-field--full">
+                      <label class="c-field__label" for="p_type">نوع الانتهاك</label>
+                      <select class="c-field__control" id="p_type" name="type">
+                        <option value="" selected>اختر النوع</option>
+                        <option>هدم المنازل والممتلكات</option>
+                        <option>الهجمات على الأراضي الزراعية والمزروعات</option>
+                        <option>الاعتداءات الجسدية على المواطنين</option>
+                        <option>الاعتداء على الأماكن المقدسة</option>
+                        <option>مصادرة الأراضي</option>
+                        <option>إنشاء البؤر الاستيطانية الجديدة</option>
+                        <option>الاعتداء على الممتلكات العامة</option>
+                        <option>مشاريع التوسعة الاستيطانية الجديدة</option>
+                        <option>هجمات المستوطنين المنظمة</option>
+                        <option>حرق المنازل</option>
+                      </select>
+                    </div>
+
+                    <div class="c-field c-field--full">
+                      <label class="c-field__label" for="p_summary">وصف مختصر</label>
+                      <textarea class="c-field__control" id="p_summary" name="summary" rows="5"
+                        placeholder="اكتب ماذا حدث باختصار ومن تضرر وأي تفاصيل مهمة"></textarea>
+                    </div>
+
+                    <div class="c-field c-field--full">
+                      <label class="c-field__label" for="p_links">روابط أو مراجع اختيارية</label>
+                      <input class="c-field__control" id="p_links" name="links" type="url"
+                        placeholder="رابط خبر أو ملف أو أي مرجع متوفر" inputmode="url">
+                    </div>
+                  </div>
+
+                  <div class="c-pform__footer">
+                    <button class="c-button c-button--block" type="submit">
+                      إرسال التوثيق
+                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+
+                    <p class="c-pform__hint">
+                      بإرسال النموذج أنت توافق على مشاركة المعلومات بهدف التوثيق ورفع الوعي دون نشر بيانات حساسة
+                    </p>
+                  </div>
+                </form>
+              </aside>
+
+            </div>
           </div>
+
         </div>
       </section>
 
-      <section id="contact" class="c-section" aria-labelledby="contact-title">
-        <div class="c-section__inner">
-          <header>
-            <h2 id="contact-title" class="c-section-title">اتصل بالمرصد</h2>
-            <p class="c-section-subtitle">نرحب بالأسئلة والشراكات المدعومة بالبيانات.</p>
+
+      <!-- =========================================
+  Contact — Info + Form + Mini FAQ (static)
+========================================== -->
+      <section id="contact" class="c-contact" aria-labelledby="contact-title">
+        <div class="c-contact__inner">
+
+          <header class="c-contact__head">
+            <span class="c-badge c-badge--soft">
+              <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              تواصل معنا
+            </span>
+
+            <h2 id="contact-title" class="c-contact__title">اتصل بالمرصد</h2>
+
+            <p class="c-contact__lead">
+              لأي استفسارات أو لتقديم تقارير يمكنك التواصل عبر البريد أو حساباتنا على وسائل التواصل
+            </p>
           </header>
-          <div class="c-card">
-            <form action="#" method="post" novalidate>
-              <label>
-                <span>الاسم الكامل</span>
-                <input type="text" name="full-name" placeholder="الاسم الكامل" required>
-              </label>
-              <label>
-                <span>البريد الإلكتروني</span>
-                <input type="email" name="email" placeholder="name@example.com" required>
-              </label>
-              <label>
-                <span>الرسالة</span>
-                <textarea name="message" rows="4" placeholder="أخبرنا بما تحتاجه"></textarea>
-              </label>
-              <button class="c-button" type="submit">إرسال الطلب</button>
-            </form>
+
+          <div class="c-contact__card">
+            <div class="c-contact__grid">
+
+              <!-- Info -->
+              <aside class="c-contact__info" aria-label="معلومات التواصل">
+                <div class="c-info">
+                  <div class="c-info__top">
+                    <div>
+                      <h3 class="c-info__title">قنوات التواصل</h3>
+                      <p class="c-info__sub">اختر القناة الأنسب وسيتم الرد في أقرب وقت</p>
+                    </div>
+                    <div class="c-info__icon" aria-hidden="true">
+                      <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                  </div>
+
+                  <div class="c-info__rows">
+                    <a class="c-info-row" href="mailto:info@example.com" aria-label="راسلنا عبر البريد">
+                      <span class="c-info-row__icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                      <span class="c-info-row__text">
+                        <strong>البريد الإلكتروني</strong>
+                        <span dir="ltr">info@example.com</span>
+                      </span>
+                      <span class="c-info-row__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-left"></i></span>
+                    </a>
+
+                    <div class="c-info-row c-info-row--static" role="group" aria-label="ساعات الرد">
+                      <span class="c-info-row__icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+                      <span class="c-info-row__text">
+                        <strong>ساعات الرد</strong>
+                        <span>خلال 24 إلى 48 ساعة</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="c-social">
+                    <h4 class="c-social__title">حساباتنا</h4>
+                    <div class="c-social__grid">
+                      <a class="c-social__btn" href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        <span>فيسبوك</span>
+                      </a>
+                      <a class="c-social__btn" href="#" aria-label="X">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        <span>X</span>
+                      </a>
+                      <a class="c-social__btn" href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        <span>إنستجرام</span>
+                      </a>
+                      <a class="c-social__btn" href="#" aria-label="Telegram">
+                        <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                        <span>تيليجرام</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="c-note">
+                    <i class="fa-solid fa-shield" aria-hidden="true"></i>
+                    <p class="c-note__text">
+                      ننصح بعدم إرسال بيانات حساسة قد تعرضك للخطر اكتف بالمكان العام ووصف الحدث والدليل المتوفر
+                    </p>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Form -->
+              <div class="c-contact__form" aria-label="نموذج تواصل">
+                <form class="c-cform" action="#" method="post" novalidate>
+                  <div class="c-cform__head">
+                    <div>
+                      <h3 class="c-cform__title">أرسل رسالة</h3>
+                      <p class="c-cform__sub">يمكنك إرسال استفسار أو تفاصيل إضافية حول واقعة موثقة</p>
+                    </div>
+                    <div class="c-cform__badge" aria-hidden="true">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                  </div>
+
+                  <div class="c-cform__grid">
+                    <div class="c-field">
+                      <label class="c-field__label" for="c_name">الاسم</label>
+                      <input class="c-field__control" id="c_name" name="name" type="text" placeholder="الاسم الكامل"
+                        autocomplete="name">
+                    </div>
+
+                    <div class="c-field">
+                      <label class="c-field__label" for="c_email">البريد الإلكتروني</label>
+                      <input class="c-field__control" id="c_email" name="email" type="email"
+                        placeholder="name@example.com" autocomplete="email" inputmode="email">
+                    </div>
+
+                    <div class="c-field c-field--full">
+                      <label class="c-field__label" for="c_subject">عنوان الرسالة</label>
+                      <input class="c-field__control" id="c_subject" name="subject" type="text"
+                        placeholder="مثال استفسار حول توثيق أو طلب تعاون">
+                    </div>
+
+                    <div class="c-field c-field--full">
+                      <label class="c-field__label" for="c_message">الرسالة</label>
+                      <textarea class="c-field__control" id="c_message" name="message" rows="6"
+                        placeholder="اكتب رسالتك هنا"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="c-cform__footer">
+                    <button class="c-button c-button--block" type="submit">
+                      إرسال الرسالة
+                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
+                    <p class="c-cform__hint">لن يتم نشر بياناتك وتستخدم فقط للتواصل</p>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Mini FAQ (Bootstrap Accordion - no custom JS) -->
+              <aside class="c-contact__faq" aria-label="الأسئلة الشائعة">
+                <div class="c-faq">
+                  <div class="c-faq__top">
+                    <div>
+                      <h3 class="c-faq__title">الأسئلة الشائعة</h3>
+                      <p class="c-faq__sub">إجابات مختصرة لتسريع التواصل</p>
+                    </div>
+                    <div class="c-faq__icon" aria-hidden="true">
+                      <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                  </div>
+
+                  <div class="accordion c-accordion" id="contactFaq">
+                    <div class="accordion-item c-accordion__item">
+                      <h2 class="accordion-header" id="faqOneHead">
+                        <button class="accordion-button collapsed c-accordion__btn" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false"
+                          aria-controls="faqOne">
+                          هل يمكن إرسال توثيق بدون اسم
+                        </button>
+                      </h2>
+                      <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHead"
+                        data-bs-parent="#contactFaq">
+                        <div class="accordion-body c-accordion__body">
+                          نعم يمكنك ترك الاسم فارغًا والاكتفاء بالمكان والوقت ووصف الواقعة والدليل المتوفر
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item c-accordion__item">
+                      <h2 class="accordion-header" id="faqTwoHead">
+                        <button class="accordion-button collapsed c-accordion__btn" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
+                          aria-controls="faqTwo">
+                          ما أهم المعلومات المطلوبة
+                        </button>
+                      </h2>
+                      <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHead"
+                        data-bs-parent="#contactFaq">
+                        <div class="accordion-body c-accordion__body">
+                          المكان والوقت ونوع الانتهاك ووصف مختصر مع أي دليل مرئي أو رابط إن توفر
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item c-accordion__item">
+                      <h2 class="accordion-header" id="faqThreeHead">
+                        <button class="accordion-button collapsed c-accordion__btn" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
+                          aria-controls="faqThree">
+                          متى يتم الرد على الرسائل
+                        </button>
+                      </h2>
+                      <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHead"
+                        data-bs-parent="#contactFaq">
+                        <div class="accordion-body c-accordion__body">
+                          عادة خلال 24 إلى 48 ساعة حسب ضغط الرسائل والتحقق من البيانات
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="c-faq__cta">
+                    <a class="c-button c-button--ghost" href="#participate">
+                      ارسل توثيقًا الآن
+                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </aside>
+
+            </div>
           </div>
+
         </div>
       </section>
+
     </main>
 
-    <!-- Partial: partials/footer.html mirrored here to keep the scaffold coherent. -->
-    <footer class="l-footer c-footer" role="contentinfo">
-      <div class="l-footer__inner">
-        <p class="u-text-muted">© 2026 المرصد الاستيطاني. جميع الحقوق محفوظة.</p>
-        <ul class="c-nav-list" aria-label="Footer navigation">
-          <li><a href="#documentation">توثيق</a></li>
-          <li><a href="#participate">مساعدة</a></li>
-          <li><a href="#contact">سياسة الخصوصية</a></li>
-        </ul>
+    <!-- =========================================
+  Footer — Al-Marsad Al-Istitani
+========================================== -->
+    <footer class="c-footer" role="contentinfo">
+      <div class="c-footer__inner">
+
+        <!-- Top -->
+        <div class="c-footer__top">
+
+          <!-- Brand -->
+          <div class="c-footer__brand">
+            <a href="#top" class="c-footer__logo" aria-label="المرصد الاستيطاني">
+              <img src="assets/img/logo.png" alt="المرصد الاستيطاني" width="180" height="48" loading="lazy">
+            </a>
+
+            <p class="c-footer__desc">
+              منصة فلسطينية مستقلة لرصد وتوثيق انتهاكات الاستيطان ضد الفلسطينيين
+              اعتمادًا على أدلة ميدانية وتقارير دورية موثوقة
+            </p>
+          </div>
+
+          <!-- Links -->
+          <nav class="c-footer__nav" aria-label="روابط سريعة">
+            <h3 class="c-footer__title">روابط سريعة</h3>
+            <ul class="c-footer__list">
+              <li><a href="#about">عن المرصد</a></li>
+              <li><a href="#goals">أهداف المرصد</a></li>
+              <li><a href="#violations">أنواع الانتهاكات</a></li>
+              <li><a href="#documentation">كيفية التوثيق</a></li>
+              <li><a href="#participate">ساهم معنا</a></li>
+              <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contact -->
+          <div class="c-footer__contact">
+            <h3 class="c-footer__title">تواصل</h3>
+
+            <a class="c-footer__contact-row" href="mailto:info@example.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <span dir="ltr">info@example.com</span>
+            </a>
+
+            <div class="c-footer__social">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="c-footer__bottom">
+          <p class="c-footer__copyright">
+            © <span>2025</span> المرصد الاستيطاني — جميع الحقوق محفوظة
+          </p>
+
+          <a href="#top" class="c-footer__toplink" aria-label="العودة إلى الأعلى">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+
       </div>
     </footer>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
