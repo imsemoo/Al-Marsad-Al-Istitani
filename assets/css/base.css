@@ -115,3 +115,89 @@ textarea,
 select {
   font: inherit;
 }
+
+/* Utility classes driven by design tokens for spacing, layout, and typography. */
+.u-mt-section {
+  margin-top: var(--space-section);
+}
+
+.u-mb-section {
+  margin-bottom: var(--space-section);
+}
+
+.u-py-section {
+  padding-block: var(--space-section);
+}
+
+.u-text-muted {
+  color: var(--color-text-muted);
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-balance {
+  text-wrap: balance;
+}
+
+.u-container-narrow,
+.u-container-wide {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.u-container-narrow {
+  max-width: var(--container-lg);
+  padding-inline: var(--space-md);
+}
+
+.u-container-wide {
+  max-width: var(--container-xxl);
+  padding-inline: var(--space-lg);
+}
+
+.u-skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-button-primary);
+  color: var(--color-text-inverse);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  z-index: var(--z-header);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.u-skip-link:focus-visible {
+  opacity: 1;
+}
+
+.u-hidden-visually {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.u-stack {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.u-flag {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.u-stack--row {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, auto);
+}

@@ -34,10 +34,8 @@
   <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-overrides.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/utilities.css">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/print.css" media="print">
   <script type="application/ld+json">
   {
@@ -520,8 +518,9 @@
       <!-- =========================================
           Violations — Uniform 3-col grid (no weird gaps)
         ========================================== -->
+
       <!-- =========================================
-  Violations — Smart chips + detail panel (Bootstrap tabs, no custom JS)
+  Violations — Chips + Panel (balanced, filled, consistent)
 ========================================== -->
       <section id="violations" class="c-violations" aria-labelledby="violations-title">
         <div class="c-violations__inner">
@@ -535,16 +534,14 @@
             <h2 id="violations-title" class="c-violations__title">أنواع الانتهاكات التي يرصدها المرصد</h2>
 
             <p class="c-violations__lead">
-              اختر نوع الانتهاك لعرض وصف مختصر ومنهجية الرصد المتعلقة به ضمن واجهة متناسقة وسريعة الفهم
+              اختر نوع الانتهاك لعرض وصف مختصر ومؤشرات سريعة ومعايير توثيق تساعد على الفهم والمتابعة
             </p>
           </header>
 
           <div class="c-violations__card">
-
             <div class="c-violations__layout">
 
-              <!-- Right: Detail panel -->
-
+              <!-- Chips -->
               <div class="c-violations__chips" role="tablist" aria-label="اختر نوع الانتهاك">
 
                 <button id="t1" class="c-vchip active" type="button" role="tab" aria-controls="v1" aria-selected="true"
@@ -608,225 +605,446 @@
                 </button>
 
               </div>
-              <!-- Left: chips -->
+
+              <!-- Panel -->
               <div class="c-violations__panel">
                 <div class="tab-content" id="violationsTabContent">
 
+                  <!-- v1 -->
                   <div class="tab-pane fade show active" id="v1" role="tabpanel" aria-labelledby="t1" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-house-chimney-crack" aria-hidden="true"></i>
-                          هدم المنازل
-                        </span>
-                        <a class="c-link" href="#documentation">
-                          تعرّف على كيفية التوثيق
-                          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                        </a>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-house-chimney-crack" aria-hidden="true"></i>
+                            هدم المنازل
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            ركّز على قبل/بعد + موقع + تاريخ
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">هدم المنازل والممتلكات</h3>
+                        <p class="c-vpanel__text">
+                          توثيق عمليات الهدم وآثارها المباشرة على العائلات والبنية المحلية مع ربط الدليل بالسياق المكاني
+                          والزماني
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>وجود آليات + تغيير واضح
+                              بالمشهد</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور قبل وبعد + شهادة
+                              متضرر</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>غياب التاريخ/الموقع أو لقطات
+                              غير واضحة</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور وفيديو قبل وبعد</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر أو شاهد</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع والتاريخ</li>
+                        </ul>
                       </div>
 
-                      <h3 class="c-vpanel__title">هدم المنازل والممتلكات</h3>
-                      <p class="c-vpanel__text">
-                        توثيق عمليات الهدم وآثارها المباشرة على العائلات والبنية المحلية مع ربط الدليل بالسياق المكاني
-                        والزماني
-                      </p>
-
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور وفيديو قبل وبعد</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر أو شاهد</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع والتاريخ</li>
-                      </ul>
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/demolition_of_houses.svg" alt="منزل مهدوم في قرية فلسطينية" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v2 -->
                   <div class="tab-pane fade" id="v2" role="tabpanel" aria-labelledby="t2" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-seedling" aria-hidden="true"></i>
-                          الأراضي الزراعية
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                            الأراضي الزراعية
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            وثّق نوع الضرر وامتداده
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">الهجمات على الأراضي الزراعية والمزروعات</h3>
+                        <p class="c-vpanel__text">
+                          رصد الاعتداءات التي تستهدف الحقول والمزروعات ومصادر الرزق بما يشمل التخريب والقطع والحرق
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>قطع أشجار/تخريب شبكات
+                              ري/حرق</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور قريبة + صور سياق
+                              للموقع</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>عدم توضيح مساحة الضرر أو
+                              نوعه</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> أثر مادي واضح</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> إفادة مالك الأرض</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق نوع الضرر</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">الهجمات على الأراضي الزراعية والمزروعات</h3>
-                      <p class="c-vpanel__text">
-                        رصد الاعتداءات التي تستهدف الحقول والمزروعات ومصادر الرزق بما يشمل التخريب والقطع والحرق
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> أثر مادي واضح</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> إفادة مالك الأرض</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق نوع الضرر</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/attacks_on_agricultural_land_and_crops.svg"
+                          alt="الهجمات على الأراضي الزراعية" width="520" height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v3 -->
                   <div class="tab-pane fade" id="v3" role="tabpanel" aria-labelledby="t3" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
-                          اعتداءات جسدية
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-hand-fist" aria-hidden="true"></i>
+                            اعتداءات جسدية
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            تسلسل الواقعة أهم من الإطالة
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">الاعتداءات الجسدية على المواطنين</h3>
+                        <p class="c-vpanel__text">
+                          توثيق الاعتداءات ومجرياتها وتبعاتها بما يساعد على فهم النمط وتكرار الحوادث
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>إصابات/تهديد/تكرار في نفس
+                              المنطقة</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>شهادة دقيقة + شاهد إضافي
+                              إن أمكن</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>غياب الزمن أو تضارب الروايات
+                              دون توضيح</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة + ملابسات</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> أدلة مرئية إن وجدت</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> ربط الحدث بالمكان</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">الاعتداءات الجسدية على المواطنين</h3>
-                      <p class="c-vpanel__text">
-                        توثيق الاعتداءات ومجرياتها وتبعاتها بما يساعد على فهم النمط وتكرار الحوادث
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة + ملابسات</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> أدلة مرئية إن وجدت</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> ربط الحدث بالمكان</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/physical_assaults.svg" alt="الاعتداءات الجسدية على المواطنين" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v4 -->
                   <div class="tab-pane fade" id="v4" role="tabpanel" aria-labelledby="t4" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-place-of-worship" aria-hidden="true"></i>
-                          أماكن مقدسة
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-place-of-worship" aria-hidden="true"></i>
+                            أماكن مقدسة
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            وثّق الإغلاق/المنع بدقة
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">الاعتداء على الأماكن المقدسة</h3>
+                        <p class="c-vpanel__text">
+                          رصد الاعتداءات والإغلاقات والإجراءات المصاحبة التي تمس حرية العبادة والقدسية
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>منع دخول/حواجز/إغلاق
+                              بوابات</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور من الموقع + زمن
+                              الإجراء</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>عدم توضيح سبب الإغلاق أو
+                              مدته</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تفاصيل الإغلاق/المنع</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور من المكان</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تاريخ وسياق الحدث</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">الاعتداء على الأماكن المقدسة</h3>
-                      <p class="c-vpanel__text">
-                        رصد الاعتداءات والإغلاقات والإجراءات المصاحبة التي تمس حرية العبادة والقدسية
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تفاصيل الإغلاق/المنع</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور من المكان</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تاريخ وسياق الحدث</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/attacks_on_holy_sites.svg" alt="الاعتداء على الأماكن المقدسة" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v5 (FIXED IMAGE) -->
                   <div class="tab-pane fade" id="v5" role="tabpanel" aria-labelledby="t5" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
-                          مصادرة أراضٍ
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-mountain-sun" aria-hidden="true"></i>
+                            مصادرة أراضٍ
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            وثّق الإخطار إن وُجد
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">مصادرة الأراضي</h3>
+                        <p class="c-vpanel__text">
+                          متابعة المصادرات والإخطارات وما يرتبط بها من تغييرات على الأرض ضمن مسار توسعي
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>سياج جديد/لافتات/قرار
+                              مصادرة</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>مستند + صور الموقع +
+                              إحداثيات</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>عدم تحديد حدود المنطقة
+                              المصادرة</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> مستند/إخطار إن وجد</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> إحداثيات/موقع</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف التغيير</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">مصادرة الأراضي</h3>
-                      <p class="c-vpanel__text">
-                        متابعة المصادرات والإخطارات وما يرتبط بها من تغييرات على الأرض ضمن مسار توسعي
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> مستند/إخطار إن وجد</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> إحداثيات/موقع</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف التغيير</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/land_confiscation.svg" alt="مصادرة الأراضي وتغيير الواقع على الأرض"
+                          width="520" height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v6 -->
                   <div class="tab-pane fade" id="v6" role="tabpanel" aria-labelledby="t6" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-city" aria-hidden="true"></i>
-                          بؤر جديدة
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-city" aria-hidden="true"></i>
+                            بؤر جديدة
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            التوثيق الدوري هنا مهم
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">إنشاء البؤر الاستيطانية الجديدة</h3>
+                        <p class="c-vpanel__text">
+                          رصد ظهور البؤر وكيف تتطور ميدانيًا وما يرتبط بها من تعديات على الأرض والمحيط
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>كرفانات/طرق ترابية/سياج
+                              جديد</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور أسبوعية من نفس
+                              الزاوية</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>صورة واحدة بدون تتبع
+                              زمني</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> مؤشرات إنشاء</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور دورية</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> سياق المنطقة</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">إنشاء البؤر الاستيطانية الجديدة</h3>
-                      <p class="c-vpanel__text">
-                        رصد ظهور البؤر وكيف تتطور ميدانيًا وما يرتبط بها من تعديات على الأرض والمحيط
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> مؤشرات إنشاء</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور دورية</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> سياق المنطقة</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/new_outposts.svg" alt="إنشاء بؤر استيطانية جديدة" width="520" height="320"
+                          loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v7 -->
                   <div class="tab-pane fade" id="v7" role="tabpanel" aria-labelledby="t7" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
-                          ممتلكات عامة
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                            ممتلكات عامة
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            حدّد نوع المرفق وتأثيره
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">الاعتداء على الممتلكات العامة</h3>
+                        <p class="c-vpanel__text">
+                          توثيق استهداف المرافق العامة والبنية الخدمية وتأثير ذلك على الحياة اليومية
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>تخريب خطوط/مبانٍ/مرافق
+                              خدمية</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صورة للضرر + تعريف
+                              المرفق</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>غياب معلومة من يستفيد من
+                              المرفق</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد المرفق</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> نوع الضرر</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> شاهد/معلومة ميدانية</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">الاعتداء على الممتلكات العامة</h3>
-                      <p class="c-vpanel__text">
-                        توثيق استهداف المرافق العامة والبنية الخدمية وتأثير ذلك على الحياة اليومية
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد المرفق</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> نوع الضرر</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شاهد/معلومة ميدانية</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/public_property.svg" alt="الاعتداء على الممتلكات العامة" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v8 -->
                   <div class="tab-pane fade" id="v8" role="tabpanel" aria-labelledby="t8" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-road" aria-hidden="true"></i>
-                          توسعة استيطانية
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-road" aria-hidden="true"></i>
+                            توسعة استيطانية
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            اربط المشروع بتأثيره على السكان
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">مشاريع التوسعة الاستيطانية الجديدة</h3>
+                        <p class="c-vpanel__text">
+                          متابعة المشاريع والتغييرات البنيوية المرتبطة بها وتأثيرها على الجغرافيا والسكان
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>طرق/حفر/تجريف/بنية
+                              تحتية</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور مرحلة-مرحلة + خريطة
+                              مبسطة</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>عدم توضيح الأثر على
+                              الحركة/المساحات</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تتبع مرحلي</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور تقدم المشروع</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف الأثر</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">مشاريع التوسعة الاستيطانية الجديدة</h3>
-                      <p class="c-vpanel__text">
-                        متابعة المشاريع والتغييرات البنيوية المرتبطة بها وتأثيرها على الجغرافيا والسكان
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تتبع مرحلي</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور تقدم المشروع</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توصيف الأثر</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/settlement_expansion.svg" alt="مشاريع توسعة استيطانية" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v9 -->
                   <div class="tab-pane fade" id="v9" role="tabpanel" aria-labelledby="t9" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                          هجمات منظمة
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+                            هجمات منظمة
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            اعمل Timeline مختصر للهجوم
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">هجمات المستوطنين المنظمة على القرى والبلدات</h3>
+                        <p class="c-vpanel__text">
+                          رصد الهجمات الجماعية وتوثيق نمطها وتكرارها وما يرافقها من أضرار مادية وبشرية
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>تعدد مواقع/تزامن/أدوات
+                              اعتداء</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>مصادر متعددة + ترتيب
+                              زمني</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>خلط أحداث يومين في رواية
+                              واحدة</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تسلسل زمني</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تعدد مصادر</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق أثر</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">هجمات المستوطنين المنظمة على القرى والبلدات</h3>
-                      <p class="c-vpanel__text">
-                        رصد الهجمات الجماعية وتوثيق نمطها وتكرارها وما يرافقها من أضرار مادية وبشرية
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تسلسل زمني</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تعدد مصادر</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> توثيق أثر</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/organized_attacks.svg" alt="هجمات منظمة على القرى والبلدات" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
+                  <!-- v10 -->
                   <div class="tab-pane fade" id="v10" role="tabpanel" aria-labelledby="t10" tabindex="0">
                     <div class="c-vpanel">
-                      <div class="c-vpanel__meta">
-                        <span class="c-vpanel__badge">
-                          <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
-                          حرق المنازل
-                        </span>
+                      <div class="c-vpanel__inner">
+                        <div class="c-vpanel__meta">
+                          <span class="c-vpanel__badge">
+                            <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+                            حرق المنازل
+                          </span>
+                          <span class="c-vpanel__hint">
+                            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                            لقطة الضرر + شهادة = أساس قوي
+                          </span>
+                        </div>
+
+                        <h3 class="c-vpanel__title">حرق المنازل في البلدات الفلسطينية</h3>
+                        <p class="c-vpanel__text">
+                          توثيق الحرائق المتعمدة والنتائج الإنسانية والمادية وربط الدليل بالمكان والزمان
+                        </p>
+
+                        <div class="c-vpanel__micro">
+                          <div class="c-vpanel__micro-item"><strong>مؤشر سريع</strong><span>آثار حريق/بقايا/دخان/تخريب
+                              متزامن</span></div>
+                          <div class="c-vpanel__micro-item"><strong>أولوية الدليل</strong><span>صور الضرر + رواية
+                              متضرر</span></div>
+                          <div class="c-vpanel__micro-item"><strong>خطأ شائع</strong><span>عدم توضيح إن كان الحريق
+                              متعمدًا ولماذا</span></div>
+                        </div>
+
+                        <ul class="c-vpanel__points">
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور الضرر</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر</li>
+                          <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع</li>
+                        </ul>
                       </div>
-                      <h3 class="c-vpanel__title">حرق المنازل في البلدات الفلسطينية</h3>
-                      <p class="c-vpanel__text">
-                        توثيق الحرائق المتعمدة والنتائج الإنسانية والمادية وربط الدليل بالمكان والزمان
-                      </p>
-                      <ul class="c-vpanel__points">
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> صور الضرر</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> شهادة متضرر</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> تحديد الموقع</li>
-                      </ul>
+
+                      <div class="c-vpanel__image">
+                        <img src="assets/img/arson_attack.svg" alt="حرق المنازل والنتائج الإنسانية والمادية" width="520"
+                          height="320" loading="lazy" decoding="async" />
+                      </div>
                     </div>
                   </div>
 
                 </div>
               </div>
 
-
-
-
             </div>
-
           </div>
 
         </div>
@@ -1055,7 +1273,7 @@
               </div>
 
               <!-- Left: Form -->
-              <aside class="c-participate__form" aria-label="نموذج إرسال توثيق">
+              <!-- <aside class="c-participate__form" aria-label="نموذج إرسال توثيق">
                 <form class="c-pform" action="#" method="post" novalidate>
                   <div class="c-pform__head">
                     <div>
@@ -1132,7 +1350,16 @@
                     </p>
                   </div>
                 </form>
+              </aside> -->
+              <aside class="c-soon" role="note" aria-live="polite">
+                <h4 class="c-soon__title">قريبًا سيتاح إرسال التوثيقات</h4>
+                <p class="c-soon__text">
+                  نعمل حاليًا على استكمال الضوابط الفنية والقانونية اللازمة لإتاحة نموذج توثيق
+                  آمن وموثوق، يهدف إلى حماية المرسلين وضمان دقة المعلومات قبل نشرها ضمن
+                  تقارير المرصد.
+                </p>
               </aside>
+
 
             </div>
           </div>
@@ -1204,7 +1431,7 @@
                       </a>
                       <a class="c-social__btn" href="#" aria-label="X">
                         <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-                        <span>X</span>
+                        <span>أكس</span>
                       </a>
                       <a class="c-social__btn" href="#" aria-label="Instagram">
                         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
@@ -1275,83 +1502,83 @@
                 </form>
               </div>
 
-              <!-- Mini FAQ (Bootstrap Accordion - no custom JS) -->
-              <aside class="c-contact__faq" aria-label="الأسئلة الشائعة">
-                <div class="c-faq">
-                  <div class="c-faq__top">
-                    <div>
-                      <h3 class="c-faq__title">الأسئلة الشائعة</h3>
-                      <p class="c-faq__sub">إجابات مختصرة لتسريع التواصل</p>
-                    </div>
-                    <div class="c-faq__icon" aria-hidden="true">
-                      <i class="fa-solid fa-circle-question"></i>
-                    </div>
-                  </div>
 
-                  <div class="accordion c-accordion" id="contactFaq">
-                    <div class="accordion-item c-accordion__item">
-                      <h2 class="accordion-header" id="faqOneHead">
-                        <button class="accordion-button collapsed c-accordion__btn" type="button"
-                          data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false"
-                          aria-controls="faqOne">
-                          هل يمكن إرسال توثيق بدون اسم
-                        </button>
-                      </h2>
-                      <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHead"
-                        data-bs-parent="#contactFaq">
-                        <div class="accordion-body c-accordion__body">
-                          نعم يمكنك ترك الاسم فارغًا والاكتفاء بالمكان والوقت ووصف الواقعة والدليل المتوفر
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item c-accordion__item">
-                      <h2 class="accordion-header" id="faqTwoHead">
-                        <button class="accordion-button collapsed c-accordion__btn" type="button"
-                          data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
-                          aria-controls="faqTwo">
-                          ما أهم المعلومات المطلوبة
-                        </button>
-                      </h2>
-                      <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHead"
-                        data-bs-parent="#contactFaq">
-                        <div class="accordion-body c-accordion__body">
-                          المكان والوقت ونوع الانتهاك ووصف مختصر مع أي دليل مرئي أو رابط إن توفر
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="accordion-item c-accordion__item">
-                      <h2 class="accordion-header" id="faqThreeHead">
-                        <button class="accordion-button collapsed c-accordion__btn" type="button"
-                          data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
-                          aria-controls="faqThree">
-                          متى يتم الرد على الرسائل
-                        </button>
-                      </h2>
-                      <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHead"
-                        data-bs-parent="#contactFaq">
-                        <div class="accordion-body c-accordion__body">
-                          عادة خلال 24 إلى 48 ساعة حسب ضغط الرسائل والتحقق من البيانات
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="c-faq__cta">
-                    <a class="c-button c-button--ghost" href="#participate">
-                      ارسل توثيقًا الآن
-                      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </aside>
 
             </div>
+            <!-- Mini FAQ (Bootstrap Accordion - no custom JS) -->
+            <aside class="c-contact__faq" aria-label="الأسئلة الشائعة">
+              <div class="c-faq">
+                <div class="c-faq__top">
+                  <div>
+                    <h3 class="c-faq__title">الأسئلة الشائعة</h3>
+                    <p class="c-faq__sub">إجابات مختصرة لتسريع التواصل</p>
+                  </div>
+                  <div class="c-faq__icon" aria-hidden="true">
+                    <i class="fa-solid fa-circle-question"></i>
+                  </div>
+                </div>
+
+                <div class="accordion c-accordion" id="contactFaq">
+                  <div class="accordion-item c-accordion__item">
+                    <h2 class="accordion-header" id="faqOneHead">
+                      <button class="accordion-button collapsed c-accordion__btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                        هل يمكن إرسال توثيق بدون اسم
+                      </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHead"
+                      data-bs-parent="#contactFaq">
+                      <div class="accordion-body c-accordion__body">
+                        نعم يمكنك ترك الاسم فارغًا والاكتفاء بالمكان والوقت ووصف الواقعة والدليل المتوفر
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item c-accordion__item">
+                    <h2 class="accordion-header" id="faqTwoHead">
+                      <button class="accordion-button collapsed c-accordion__btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                        ما أهم المعلومات المطلوبة
+                      </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHead"
+                      data-bs-parent="#contactFaq">
+                      <div class="accordion-body c-accordion__body">
+                        المكان والوقت ونوع الانتهاك ووصف مختصر مع أي دليل مرئي أو رابط إن توفر
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item c-accordion__item">
+                    <h2 class="accordion-header" id="faqThreeHead">
+                      <button class="accordion-button collapsed c-accordion__btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
+                        aria-controls="faqThree">
+                        متى يتم الرد على الرسائل
+                      </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHead"
+                      data-bs-parent="#contactFaq">
+                      <div class="accordion-body c-accordion__body">
+                        عادة خلال 24 إلى 48 ساعة حسب ضغط الرسائل والتحقق من البيانات
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="c-faq__cta">
+                  <a class="c-button c-button--ghost" href="#participate">
+                    ارسل توثيقًا الآن
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </aside>
           </div>
 
         </div>
       </section>
+
 
     </main>
 

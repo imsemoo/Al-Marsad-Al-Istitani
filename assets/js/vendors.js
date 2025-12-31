@@ -1,1 +1,0 @@
-﻿/* Vendor script placeholder for future libraries. */
