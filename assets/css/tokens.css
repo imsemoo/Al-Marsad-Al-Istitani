@@ -50,30 +50,34 @@
 /* Core design tokens for Arabic RTL editorial experience. */
 :root {
   /* Core palette */
-  --c-text: #4e4e4e;
-  --c-surface: #e4e4e4;
-  --c-brand: #3c5252;
-  --c-accent: #868249;
+  --c-text: #2f3330;
+  --c-text-muted: #5b6055;
+  --c-text-strong: #1a1f1d;
+  --c-surface: #f4f6f1;
+  --c-surface-dark: #e5ebe3;
+  --c-divider: #d6dbd2;
+  --c-brand: #1f4b44;
+  --c-accent: #7a8a58;
 
   /* Light theme surfaces */
-  --color-bg-page: #f7f7f5;
+  --color-bg-page: #f5f7f3;
   /* page background */
-  --color-bg-section: #ffffff;
+  --color-bg-section: #fbfdfb;
   /* main sections */
   --color-bg-card: #ffffff;
   /* cards */
-  --color-bg-soft: #f1f1ee;
+  --color-bg-soft: #ecf1ea;
   /* soft blocks / chips background */
 
   /* Text */
-  --color-heading: #2b2b2b;
+  --color-heading: var(--c-text-strong);
   --color-text-primary: var(--c-text);
-  --color-text-muted: #6a6a6a;
+  --color-text-muted: #5d6259;
   --color-text-inverse: #ffffff;
 
   /* Borders */
-  --color-border-soft: #e3e3de;
-  --color-border-strong: #d2d2cb;
+  --color-border-soft: #dfe3da;
+  --color-border-strong: #d0d5cb;
 
   /* Brand roles */
   --color-brand: var(--c-brand);
@@ -81,14 +85,14 @@
 
   /* Links */
   --color-link: var(--c-brand);
-  --color-link-hover: color-mix(in srgb, var(--c-brand) 85%, #000);
+  --color-link-hover: color-mix(in srgb, var(--c-brand) 70%, #000);
 
   /* Buttons */
   --color-button-primary: var(--c-brand);
-  --color-button-primary-hover: color-mix(in srgb, var(--c-brand) 85%, #000);
+  --color-button-primary-hover: color-mix(in srgb, var(--c-brand) 50%, #000);
 
   /* Focus */
-  --color-focus-ring: color-mix(in srgb, var(--c-brand) 35%, transparent);
+  --color-focus-ring: color-mix(in srgb, var(--c-brand) 25%, rgba(225, 233, 229, 0.95));
 
   /* Typography foundation */
   --ff-body: "Alexandria", "Cairo", "Segoe UI", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
@@ -143,9 +147,10 @@
   --radius-pill: 999px;
 
   /* Shadow system */
-  --shadow-sm: 0 6px 14px rgba(60, 82, 82, 0.08);
-  --shadow-md: 0 15px 35px rgba(60, 82, 82, 0.12);
-  --shadow-lg: 0 30px 60px rgba(60, 82, 82, 0.16);
+  --shadow-sm: 0 10px 28px rgba(21, 30, 26, 0.06);
+  --shadow-md: 0 20px 40px rgba(21, 30, 26, 0.08);
+  --shadow-lg: 0 30px 70px rgba(21, 30, 26, 0.12);
+  --shadow-level-1: 0 18px 32px rgba(21, 30, 26, 0.07);
 
   /* Depth / layering */
   --z-header: 60;
@@ -155,5 +160,6 @@
 
   /* Motion helpers */
   --transition-base: 220ms ease-out;
+  --transition-fast: 180ms ease-out;
   --transition-strong: 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }

@@ -286,8 +286,9 @@ body.is-scrolled .c-header__inner {
   gap: var(--space-xs);
   padding: 0.65rem 1.5rem;
   border: 1px solid transparent;
-  background-color: var(--c-brand);
-  color: #fff;
+  background-color: var(--color-button-primary);
+  border-color: var(--color-button-primary);
+  color: var(--color-text-inverse);
   font-size: var(--fs-xs);
   transition: background-color var(--transition-fast), transform var(--transition-fast);
   cursor: pointer;
@@ -295,8 +296,9 @@ body.is-scrolled .c-header__inner {
 
 .c-button:hover,
 .c-button:focus-visible {
-  background-color: var(--c-accent);
-  color: #fff;
+  background-color: var(--color-button-primary-hover);
+  color: var(--color-text-inverse);
+  outline: none;
 }
 
 .c-button--ghost {
@@ -1759,7 +1761,8 @@ body.is-scrolled .c-header__inner {
   padding: var(--space-lg);
   display: grid;
   gap: var(--space-md);
-  background: ;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .c-evidence__top {
