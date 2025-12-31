@@ -3,7 +3,8 @@
 ========================================================= */
 
 .c-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: var(--z-header);
   background: color-mix(in srgb, var(--color-bg-section) 92%, transparent);
@@ -341,10 +342,7 @@ body.is-scrolled .c-header__inner {
   margin-bottom: var(--space-2);
 }
 
-.c-hero__title {
-  font-size: clamp(2rem, 3vw, 3rem);
-  margin-bottom: var(--space-3);
-}
+
 
 .c-hero__lead {
   font-size: 1.1rem;
@@ -506,7 +504,6 @@ body.is-scrolled .c-header__inner {
   line-height: var(--lh-tight);
   color: var(--color-heading);
   margin: 0 0 var(--space-md);
-  letter-spacing: -0.02em;
 }
 
 .c-hero__title-sub {
@@ -820,7 +817,7 @@ body.is-scrolled .c-header__inner {
   border: 1px solid var(--color-border-soft);
   background: var(--color-bg-card);
   color: var(--color-text-muted);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
 }
 
 .c-evidence__pill i {
@@ -841,23 +838,13 @@ body.is-scrolled .c-header__inner {
 
 /* Switch (tabs style, static) */
 .c-evidence__switch {
-  padding: var(--space-md) var(--space-lg);
+  padding: 0 var(--space-lg) var(--space-md);
   display: inline-flex;
   gap: 0.35rem;
   border-bottom: 1px solid var(--color-border-soft);
+  width: fit-content;
 }
 
-.c-evidence__tab {
-  appearance: none;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--color-text-muted);
-  font-weight: var(--fw-semibold);
-  font-size: var(--fs-sm);
-  padding: 0.55rem 0.85rem;
-  border-radius: var(--radius-pill);
-  cursor: default;
-}
 
 .c-evidence__tab.is-active {
   color: var(--color-brand);
@@ -884,7 +871,7 @@ body.is-scrolled .c-header__inner {
   background: var(--color-bg-soft);
   border: 1px solid var(--color-border-soft);
   transition: background-color var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
 }
 
 .c-evidence__chip:hover,
@@ -945,12 +932,7 @@ body.is-scrolled .c-header__inner {
   font-size: var(--fs-sm);
 }
 
-/* Actions */
-.c-evidence__actions {
-  padding: 0 var(--space-lg) var(--space-lg);
-  display: grid;
-  gap: var(--space-sm);
-}
+
 
 .c-evidence__note {
   margin: 0;
@@ -998,19 +980,12 @@ body.is-scrolled .c-header__inner {
   pointer-events: none;
 }
 
-/* Tabs header */
-.c-evidence__switch {
-  padding: var(--space-sm) var(--space-lg);
-  display: inline-flex;
-  gap: 0.35rem;
-  border-bottom: 1px solid var(--color-border-soft);
-}
 
 .c-evidence__tab {
   cursor: pointer;
   padding: 0.5rem 0.85rem;
   border-radius: var(--radius-pill);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
   color: var(--color-text-muted);
   background: transparent;
@@ -1054,10 +1029,14 @@ body.is-scrolled .c-header__inner {
 
 /* Actions pinned to bottom */
 .c-evidence__actions {
+  padding: var(--space-lg);
+  gap: var(--space-sm);
   margin-top: auto;
-  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
   border-top: 1px solid var(--color-border-soft);
-  background: var(--color-bg-card);
+
 }
 
 /* =========================================================
@@ -1758,7 +1737,6 @@ body.is-scrolled .c-header__inner {
   height: 100%;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border-soft);
-  padding: var(--space-lg);
   display: grid;
   gap: var(--space-md);
   background: var(--color-bg-card);
@@ -1844,12 +1822,7 @@ body.is-scrolled .c-header__inner {
   line-height: var(--lh-loose);
 }
 
-.c-evidence__actions {
-  margin-top: auto;
-  display: flex;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-}
+
 
 .c-evidence__actions .c-button {
   flex: 1 1 180px;

@@ -104,7 +104,7 @@
   --fs-lg: clamp(1.2rem, 1.5vw, 1.4rem);
   --fs-xl: clamp(1.45rem, 2vw, 1.75rem);
   --fs-xxl: clamp(1.85rem, 2.6vw, 2.25rem);
-  --fs-display: clamp(2.5rem, 4vw, 3.6rem);
+  --fs-display: clamp(2.5rem, 4vw, 3.2rem);
 
   --lh-tight: 1.25;
   --lh-normal: 1.6;

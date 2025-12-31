@@ -5,10 +5,12 @@
   flex-direction: column;
   background-color: var(--color-bg-page);
   gap: var(--space-sm);
+  padding-top: 68.8px;
 }
 
 .l-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: var(--z-header);
 }
