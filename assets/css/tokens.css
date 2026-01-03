@@ -163,3 +163,150 @@
   --transition-fast: 180ms ease-out;
   --transition-strong: 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
+
+/* =========================================================
+   Dark Theme — Professional (green-charcoal, calm contrast)
+   Apply with: html[data-theme="dark"] or :root if always dark
+========================================================= */
+
+:root,
+html[data-theme="dark"] {
+  /* Core palette (dark foundation) */
+  --c-text: #e7eee9;
+  /* primary text */
+  --c-text-muted: #b4c0b8;
+  /* muted text */
+  --c-text-strong: #f2f7f4;
+  /* headings / strong */
+  --c-surface: #0f1412;
+  /* page base */
+  --c-surface-dark: #0b100e;
+  /* deeper sections */
+  --c-divider: rgba(231, 238, 233, 0.10);
+
+  /* Brand — tuned for dark backgrounds */
+  --c-brand: #3b7f73;
+  /* green-teal brand (reads on dark) */
+  --c-accent: #a7ba6a;
+  /* olive accent (warm) */
+
+  /* Backgrounds / Surfaces */
+  --color-bg-page: #0f1412;
+  /* page background */
+  --color-bg-section: #121916;
+  /* main sections */
+  --color-bg-card: #151d1a;
+  /* cards */
+  --color-bg-soft: #1a231f;
+  /* chips / soft blocks */
+
+  /* Text */
+  --color-heading: var(--c-text-strong);
+  --color-text-primary: var(--c-text);
+  --color-text-muted: var(--c-text-muted);
+  --color-text-inverse: #0f1412;
+
+  /* Borders (subtle; avoid "boxy" feel) */
+  --color-border-soft: rgba(231, 238, 233, 0.10);
+  --color-border-strong: rgba(231, 238, 233, 0.16);
+
+  /* Brand roles */
+  --color-brand: var(--c-brand);
+  --color-accent: var(--c-accent);
+
+  /* Links */
+  --color-link: color-mix(in srgb, var(--c-brand) 85%, #ffffff);
+  --color-link-hover: color-mix(in srgb, var(--c-brand) 70%, #ffffff);
+
+  /* Buttons */
+  --color-button-primary: color-mix(in srgb, var(--c-brand) 78%, #0f1412);
+  --color-button-primary-hover: color-mix(in srgb, var(--c-brand) 88%, #0f1412);
+
+  /* Focus (visible on dark, not neon) */
+  --color-focus-ring: color-mix(in srgb, var(--c-brand) 35%, rgba(255, 255, 255, 0.20));
+
+  /* Typography foundation (as-is) */
+  --ff-body: "Alexandria", "Cairo", "Segoe UI", "Noto Sans Arabic", system-ui, -apple-system, sans-serif;
+  --ff-heading: "Alexandria-Bold", "GE SS Unique", "Segoe UI", sans-serif;
+
+  --fs-xs: clamp(0.8rem, 0.9vw, 0.9rem);
+  --fs-sm: clamp(0.95rem, 1vw, 1rem);
+  --fs-md: clamp(1rem, 1.2vw, 1.1rem);
+  --fs-lg: clamp(1.2rem, 1.5vw, 1.4rem);
+  --fs-xl: clamp(1.45rem, 2vw, 1.75rem);
+  --fs-xxl: clamp(1.85rem, 2.6vw, 2.25rem);
+  --fs-display: clamp(2.5rem, 4vw, 3.2rem);
+
+  --lh-tight: 1.25;
+  --lh-normal: 1.6;
+  --lh-loose: 1.9;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Spacing (as-is) */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-section: 4rem;
+
+  /* Containers (as-is) */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-xxl: 1320px;
+
+  /* Breakpoints (as-is) */
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+  --bp-xxl: 1400px;
+
+  /* Radius (as-is) */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1.25rem;
+  --radius-pill: 999px;
+
+  /* Shadows — convert to subtle elevation + glow (works on dark) */
+  --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 18px 42px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 28px 70px rgba(0, 0, 0, 0.55);
+  --shadow-level-1: 0 16px 32px rgba(0, 0, 0, 0.40);
+
+  /* Depth / layering (as-is) */
+  --z-header: 60;
+  --z-overlay: 90;
+  --z-dropdown: 80;
+  --z-modal: 110;
+
+  /* Motion (as-is) */
+  --transition-base: 220ms ease-out;
+  --transition-fast: 180ms ease-out;
+  --transition-strong: 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Subtle section texture (prevents "flat black") */
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(59, 127, 115, 0.14), transparent 60%),
+    radial-gradient(900px 520px at 0% 20%, rgba(167, 186, 106, 0.10), transparent 55%),
+    var(--color-bg-page);
+}
+
+/* Cards feel "designed" not boxed */
+html[data-theme="dark"] .c-card,
+html[data-theme="dark"] .c-violations__panel,
+html[data-theme="dark"] .c-violations,
+html[data-theme="dark"] .c-contact__card {
+  backdrop-filter: saturate(120%);
+}
